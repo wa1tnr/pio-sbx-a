@@ -75,23 +75,45 @@ void setup(void) {
     blinking();
 }
 
+
 float lerp(float x, float x0, float x1, float y0, float y1) {
-  // Check if the input value (x) is outside its desired range and clamp to
-  // those min/max y values.
   if (x <= x0) {
     return y0;
   }
   else if (x >= x1) {
     return y1;
   }
-  // Otherwise compute the value y based on x's position within its range and
-  // the desired y min & max.
   return y0 + (y1-y0)*((x-x0)/(x1-x0));
 }
+
 
 void loop(void) {
     while(-1); // endless
     Serial.println("This never prints.");
+
+  float x = CircuitPlayground.motionX();
+  float y = CircuitPlayground.motionY();
+  float x_mag = abs(x);
+  float x_mouse = lerp(x_mag, XACCEL_MIN, XACCEL_MAX, 0.0, XMOUSE_RANGE);
+  float y_mag = abs(y);
+  float y_mouse = lerp(y_mag, YACCEL_MIN, YACCEL_MAX, 0.0, YMOUSE_RANGE);
+
+  if (x < 0) {
+    x_mouse *= -1.0;
+  }
+  if (y < 0) {
+    y_mouse *= -1.0;
+  }
+  x_mouse = floor(x_mouse*XMOUSE_SCALE);
+  y_mouse = floor(y_mouse*YMOUSE_SCALE);
+
+  if (!FLIP_AXES) {
+    Mouse.move((int)x_mouse, (int)y_mouse, 0);
+  }
+  else {
+    Mouse.move((int)y_mouse, (int)x_mouse, 0);
+  }
+  delay(10);
 }
 
 // ENiD,

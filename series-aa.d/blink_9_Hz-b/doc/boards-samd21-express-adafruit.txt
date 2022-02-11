@@ -1,0 +1,3 @@
+adafruit_circuitplayground_m0  SAMD21G18A   48MHz        256KB    32KB   Adafruit Circuit Playground Express
+adafruit_feather_m0_express    SAMD21G18A   48MHz        256KB    32KB   Adafruit Feather M0 Express
+adafruit_metro_m0              SAMD21G18A   48MHz        256KB    32KB   Adafruit Metro M0 Expresss

@@ -1,4 +1,5 @@
 // old_filename: blink_9_Hz-a.ino
+#define DATE_STAMP "11 Feb 2022 Friday 20:54:06 UTC"
 
 // target: Adafruit Circuit Playground Express (CPX) ATSAMD21G18A
 
@@ -100,6 +101,7 @@ void in_all_cases(void) {
 }
 
 void announces(void) {
+    Serial.println(DATE_STAMP);
     blinking();
     mousing();
     in_all_cases();

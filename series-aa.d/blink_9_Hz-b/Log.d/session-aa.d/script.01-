@@ -1,0 +1,368 @@
+Script started on 2022-02-11 16:23:56 UTC
+
+ clean then compile and upload.  Recent.
+
+   quick seach/replace macro: :%s/\^\[\[0m\^\[\[33m/ESC_SEQU__/g
+
+ $   ls | cat
+doc
+include
+lib
+Log.d
+platformio.ini
+src
+test
+
+ $   pio run -t clean | cat 2>&1
+Processing adafruit_circuitplayground_m0 (platform: atmelsam; board: adafruit_circuitplayground_m0; framework: arduino)
+--------------------------------------------------------------------------------
+Build environment is clean
+Done cleaning
+========================= [SUCCESS] Took 0.34 seconds =========================
+
+ $   pio run -t upload | cat 2>&1
+Processing adafruit_circuitplayground_m0 (platform: atmelsam; board: adafruit_circuitplayground_m0; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/atmelsam/adafruit_circuitplayground_m0.html
+PLATFORM: Atmel SAM (7.1.0) > Adafruit Circuit Playground Express
+HARDWARE: SAMD21G18A 48MHz, 32KB RAM, 256KB Flash
+DEBUG: Current (atmel-ice) External (atmel-ice, blackmagic, jlink)
+PACKAGES: 
+ - framework-arduino-samd-adafruit 1.7.5 
+ - framework-cmsis 2.50400.181126 (5.4.0) 
+ - framework-cmsis-atmel 1.2.2 
+ - tool-bossac 1.10700.190624 (1.7.0) 
+ - toolchain-gccarmnoneeabi 1.90301.200702 (9.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 27 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <Adafruit Circuit Playground> 1.11.4
+|   |-- <SPI> 1.0
+|   |   |-- <Adafruit Zero DMA Library> 1.1.0
+|   |   |   |-- <Adafruit TinyUSB Library> 1.4.3
+|   |   |-- <Adafruit TinyUSB Library> 1.4.3
+|   |-- <Wire> 1.0
+|   |   |-- <Adafruit TinyUSB Library> 1.4.3
+|-- <Mouse> 1.0.1
+|   |-- <HID> 1.0
+|-- <SPI> 1.0
+|   |-- <Adafruit Zero DMA Library> 1.1.0
+|   |   |-- <Adafruit TinyUSB Library> 1.4.3
+|   |-- <Adafruit TinyUSB Library> 1.4.3
+|-- <Wire> 1.0
+|   |-- <Adafruit TinyUSB Library> 1.4.3
+Building in release mode
+Compiling .pio/build/adafruit_circuitplayground_m0/src/main.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/Adafruit_TinyUSB_API.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_CDC.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Device.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/hid/Adafruit_USBD_HID.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/midi/Adafruit_USBD_MIDI.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBD_MSC.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/ports/esp32/Adafruit_TinyUSB_esp32.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/ports/nrf/Adafruit_TinyUSB_nrf.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/ports/rp2040/Adafruit_TinyUSB_rp2040.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/ports/samd/Adafruit_TinyUSB_samd.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/webusb/Adafruit_USBD_WebUSB.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/audio/audio_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/bth/bth_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/cdc/cdc_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/dfu/dfu_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/dfu/dfu_rt_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/hid/hid_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/midi/midi_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/msc/msc_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/net/net_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/usbtmc/usbtmc_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/vendor/vendor_device.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/common/tusb_fifo.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/device/usbd.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/device/usbd_control.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/espressif/esp32sx/dcd_esp32sx.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/microchip/samd/dcd_samd.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/nordic/nrf5x/dcd_nrf5x.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/nxp/lpc_ip3511/dcd_lpc_ip3511.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/nxp/transdimension/dcd_transdimension.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/hcd_rp2040.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/rp2040_usb.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/st/stm32_fsdev/dcd_stm32_fsdev.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/st/synopsys/dcd_synopsys.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/tusb.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libd6e/Adafruit Zero DMA Library/Adafruit_ZeroDMA.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libf61/SPI/SPI.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/libded/Wire/Wire.cpp.o
+Archiving .pio/build/adafruit_circuitplayground_m0/libfb2/libAdafruit_TinyUSB_Arduino.a
+Archiving .pio/build/adafruit_circuitplayground_m0/libd6e/libAdafruit Zero DMA Library.a
+Indexing .pio/build/adafruit_circuitplayground_m0/libfb2/libAdafruit_TinyUSB_Arduino.a
+Indexing .pio/build/adafruit_circuitplayground_m0/libd6e/libAdafruit Zero DMA Library.a
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/Adafruit_CircuitPlayground.cpp.o
+Archiving .pio/build/adafruit_circuitplayground_m0/libf61/libSPI.a
+Indexing .pio/build/adafruit_circuitplayground_m0/libf61/libSPI.a
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_FreeTouch.cpp.o
+Archiving .pio/build/adafruit_circuitplayground_m0/libded/libWire.a
+Indexing .pio/build/adafruit_circuitplayground_m0/libded/libWire.a
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_LIS3DH.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_Mic.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_NeoPixel.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_Speaker.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_ZeroPDM.cpp.o
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/Adafruit_CPlay_Speaker.cpp: In member function 'void Adafruit_CPlay_Speaker::playSound(const uint8_t*, uint32_t, uint16_t, bool)':
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/Adafruit_CPlay_Speaker.cpp:153:14: warning: 'hiBits' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  153 |       hiBits <<= 2; // Do this before write, because of masking op below
+      |       ~~~~~~~^~~~~
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/Adafruit_ZeroPDM.cpp:25:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/Adafruit_ZeroPDM.h: In constructor 'Adafruit_ZeroPDM::Adafruit_ZeroPDM(int, int, uint8_t)':
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/Adafruit_ZeroPDM.h:66:11: warning: 'Adafruit_ZeroPDM::_gclk' will be initialized after [-Wreorder]
+   66 |   uint8_t _gclk;
+      |           ^~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/Adafruit_ZeroPDM.h:62:7: warning:   'int Adafruit_ZeroPDM::_clk' [-Wreorder]
+   62 |   int _clk, _data;
+      |       ^~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/Adafruit_ZeroPDM.cpp:39:1: warning:   when initialized here [-Wreorder]
+   39 | Adafruit_ZeroPDM::Adafruit_ZeroPDM(int clockpin, int datapin, uint8_t gclk):
+      | ^~~~~~~~~~~~~~~~
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/CP_Firmata.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/CPlay_CapacitiveSensor.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibDecodeBase.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibHardware.cpp.o
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:83,
+                 from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibDecodeBase.cpp:14:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:71: warning: "IR_SEND_PWM_PIN" redefined
+   71 |   #define IR_SEND_PWM_PIN 25
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:67: note: this is the location of the previous definition
+   67 | #define IR_SEND_PWM_PIN 12
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:234: warning: "IR_CLEAR_INTERRUPT" redefined
+  234 | #define IR_CLEAR_INTERRUPT  IR_TCx->COUNT16.INTFLAG.bit.MC0 = 1;
+      | 
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibDecodeBase.cpp:14:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:24: note: this is the location of the previous definition
+   24 | #define IR_CLEAR_INTERRUPT {} //clear interrupt flag
+      | 
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:83,
+                 from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.cpp:33:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:71: warning: "IR_SEND_PWM_PIN" redefined
+   71 |   #define IR_SEND_PWM_PIN 25
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:67: note: this is the location of the previous definition
+   67 | #define IR_SEND_PWM_PIN 12
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:234: warning: "IR_CLEAR_INTERRUPT" redefined
+  234 | #define IR_CLEAR_INTERRUPT  IR_TCx->COUNT16.INTFLAG.bit.MC0 = 1;
+      | 
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.cpp:33:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:24: note: this is the location of the previous definition
+   24 | #define IR_CLEAR_INTERRUPT {} //clear interrupt flag
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibDecodeBase.cpp: In member function 'void IRdecodeBase::dumpResults(bool)':
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibDecodeBase.cpp:59:8: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   59 |        if(interval>0)LowSpace=min(LowSpace, interval);  HiSpace=max (HiSpace, interval);
+      |        ^~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibDecodeBase.cpp:59:57: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   59 |        if(interval>0)LowSpace=min(LowSpace, interval);  HiSpace=max (HiSpace, interval);
+      |                                                         ^~~~~~~
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibProtocols.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibRecvBase.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibRecvPCI.cpp.o
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:83,
+                 from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibRecvBase.cpp:21:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:71: warning: "IR_SEND_PWM_PIN" redefined
+   71 |   #define IR_SEND_PWM_PIN 25
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:67: note: this is the location of the previous definition
+   67 | #define IR_SEND_PWM_PIN 12
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:234: warning: "IR_CLEAR_INTERRUPT" redefined
+  234 | #define IR_CLEAR_INTERRUPT  IR_TCx->COUNT16.INTFLAG.bit.MC0 = 1;
+      | 
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibRecvBase.cpp:21:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:24: note: this is the location of the previous definition
+   24 | #define IR_CLEAR_INTERRUPT {} //clear interrupt flag
+      | 
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibSAMD21.cpp.o
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:83,
+                 from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibRecvPCI.cpp:19:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:71: warning: "IR_SEND_PWM_PIN" redefined
+   71 |   #define IR_SEND_PWM_PIN 25
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:67: note: this is the location of the previous definition
+   67 | #define IR_SEND_PWM_PIN 12
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:234: warning: "IR_CLEAR_INTERRUPT" redefined
+  234 | #define IR_CLEAR_INTERRUPT  IR_TCx->COUNT16.INTFLAG.bit.MC0 = 1;
+      | 
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibRecvPCI.cpp:19:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:24: note: this is the location of the previous definition
+   24 | #define IR_CLEAR_INTERRUPT {} //clear interrupt flag
+      | 
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:83,
+                 from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.cpp:14:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:71: warning: "IR_SEND_PWM_PIN" redefined
+   71 |   #define IR_SEND_PWM_PIN 25
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:67: note: this is the location of the previous definition
+   67 | #define IR_SEND_PWM_PIN 12
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:234: warning: "IR_CLEAR_INTERRUPT" redefined
+  234 | #define IR_CLEAR_INTERRUPT  IR_TCx->COUNT16.INTFLAG.bit.MC0 = 1;
+      | 
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.cpp:14:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:24: note: this is the location of the previous definition
+   24 | #define IR_CLEAR_INTERRUPT {} //clear interrupt flag
+      | 
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibSendBase.cpp.o
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:83,
+                 from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSendBase.cpp:17:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:71: warning: "IR_SEND_PWM_PIN" redefined
+   71 |   #define IR_SEND_PWM_PIN 25
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:67: note: this is the location of the previous definition
+   67 | #define IR_SEND_PWM_PIN 12
+      | 
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSAMD21.h:234: warning: "IR_CLEAR_INTERRUPT" redefined
+  234 | #define IR_CLEAR_INTERRUPT  IR_TCx->COUNT16.INTFLAG.bit.MC0 = 1;
+      | 
+In file included from .pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibSendBase.cpp:17:
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/IRLibHardware.h:24: note: this is the location of the previous definition
+   24 | #define IR_CLEAR_INTERRUPT {} //clear interrupt flag
+      | 
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/ffft.S.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/talkie.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/lib7c6/HID/HID.cpp.o
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp: In member function 'void Adafruit_CPlay_Speaker::say(const uint8_t*)':
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:146:3: warning: 'synthPeriod' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  146 |   if(synthPeriod) { // Voiced source
+      |   ^~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:155:21: warning: 'synthK10' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  155 |   u0     -=       ((synthK10 *          x9) +
+      |                     ^~~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:156:7: warning: 'synthK9' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  156 |      (synthK9  *          x8)) >>  7;
+      |       ^~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:158:21: warning: 'synthK8' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  158 |   u0     -=       ((synthK8  *          x7 ) >>  7);
+      |                     ^~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:160:21: warning: 'synthK7' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  160 |   u0     -=       ((synthK7  *          x6 ) >>  7);
+      |                     ^~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:162:21: warning: 'synthK6' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  162 |   u0     -=       ((synthK6  *          x5 ) >>  7);
+      |                     ^~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:164:21: warning: 'synthK5' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  164 |   u0     -=       ((synthK5  *          x4 ) >>  7);
+      |                     ^~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:166:21: warning: 'synthK4' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  166 |   u0     -=       ((synthK4  *          x3 ) >>  7);
+      |                     ^~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:168:21: warning: 'synthK3' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  168 |   u0     -=       ((synthK3  *          x2 ) >>  7);
+      |                     ^~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:150:9: warning: 'synthEnergy' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  150 |         (uint32_t)synthEnergy) >> 8;
+      |         ^~~~~~~~~~~~~~~~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:170:21: warning: 'synthK2' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  170 |   u0     -=       ((synthK2  * (int32_t)x1 ) >> 15);
+      |                     ^~~~~~~
+.pio/libdeps/adafruit_circuitplayground_m0/Adafruit Circuit Playground/utility/talkie.cpp:172:21: warning: 'synthK1' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  172 |   u0     -=       ((synthK1  * (int32_t)x0 ) >> 15);
+      |                     ^~~~~~~
+Compiling .pio/build/adafruit_circuitplayground_m0/lib505/Mouse/Mouse.cpp.o
+Archiving .pio/build/adafruit_circuitplayground_m0/lib2fb/libAdafruit Circuit Playground.a
+In file included from /some/path/to/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino/Arduino.h:157,
+                 from /some/path/to/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino/USB/SAMD21_USBDevice.h:22,
+                 from /some/path/to/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino/USB/USBAPI.h:37,
+                 from /some/path/to/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino/USB/PluggableUSB.h:23,
+                 from /some/path/to/.platformio/packages/framework-arduino-samd-adafruit/libraries/HID/HID.cpp:19:
+/some/path/to/.platformio/packages/framework-arduino-samd-adafruit/libraries/HID/HID.cpp: In member function 'virtual int HID_::getInterface(uint8_t*)':
+/some/path/to/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino/USB/USBCore.h:37:56: warning: narrowing conversion of '(int)(((unsigned char)((int)((HID_*)this)->HID_::<anonymous>.PluggableUSBModule::pluggedEndpoint)) | 128)' from 'int' to 'uint8_t' {aka 'unsigned char'} [-Wnarrowing]
+   37 | #define USB_ENDPOINT_IN(addr)                  ((addr) | 0x80)
+      |                                                ~~~~~~~~^~~~~~~
+/some/path/to/.platformio/packages/framework-arduino-samd-adafruit/cores/arduino/USB/USBCore.h:276:10: note: in definition of macro 'D_ENDPOINT'
+  276 |  { 7, 5, _addr,_attr,_packetSize, _interval }
+      |          ^~~~~
+/some/path/to/.platformio/packages/framework-arduino-samd-adafruit/libraries/HID/HID.cpp:36:14: note: in expansion of macro 'USB_ENDPOINT_IN'
+   36 |   D_ENDPOINT(USB_ENDPOINT_IN(pluggedEndpoint), USB_ENDPOINT_TYPE_INTERRUPT, 0x40, 0x01)
+      |              ^~~~~~~~~~~~~~~
+Indexing .pio/build/adafruit_circuitplayground_m0/lib2fb/libAdafruit Circuit Playground.a
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduinoVariant/variant.cpp.o
+Archiving .pio/build/adafruit_circuitplayground_m0/lib7c6/libHID.a
+Indexing .pio/build/adafruit_circuitplayground_m0/lib7c6/libHID.a
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/IPAddress.cpp.o
+Archiving .pio/build/adafruit_circuitplayground_m0/lib505/libMouse.a
+Indexing .pio/build/adafruit_circuitplayground_m0/lib505/libMouse.a
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Print.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Reset.cpp.o
+Archiving .pio/build/adafruit_circuitplayground_m0/libFrameworkArduinoVariant.a
+Indexing .pio/build/adafruit_circuitplayground_m0/libFrameworkArduinoVariant.a
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/SERCOM.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Stream.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Tone.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/CDC.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/PluggableUSB.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/SAMD21_USBDevice.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/USBCore.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/samd21_host.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Uart.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WInterrupts.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WMath.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WString.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/abi.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/avr/dtostrf.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/cortex_handlers.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/delay.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/hooks.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/itoa.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/main.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/math_helper.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/new.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/pulse.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/pulse_asm.S.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/startup.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_analog.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_digital.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_private.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_shift.c.o
+Archiving .pio/build/adafruit_circuitplayground_m0/libFrameworkArduino.a
+Indexing .pio/build/adafruit_circuitplayground_m0/libFrameworkArduino.a
+Linking .pio/build/adafruit_circuitplayground_m0/firmware.elf
+Checking size .pio/build/adafruit_circuitplayground_m0/firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]   8.0% (used 2612 bytes from 32768 bytes)
+Flash: [          ]   4.2% (used 10976 bytes from 262144 bytes)
+Building .pio/build/adafruit_circuitplayground_m0/firmware.bin
+Configuring upload protocol...
+AVAILABLE: atmel-ice, blackmagic, jlink, sam-ba
+CURRENT: upload_protocol = sam-ba
+Looking for upload port...
+Auto-detected: /dev/ttyACM0
+Forcing reset using 1200bps open/close on port /dev/ttyACM0
+Waiting for the new upload port...
+Uploading .pio/build/adafruit_circuitplayground_m0/firmware.bin
+Atmel SMART device 0x10010005 found
+Erase flash
+done in 0.835 seconds
+
+Write 10976 bytes to flash (172 pages)
+
+[===========                   ] 37% (64/172 pages)
+[======================        ] 74% (128/172 pages)
+[==============================] 100% (172/172 pages)
+done in 0.082 seconds
+
+Verify 10976 bytes of flash with checksum.
+Verify successful
+done in 0.037 seconds
+CPU reset.
+========================= [SUCCESS] Took 11.27 seconds =========================
+ $  exit
+exit
+
+Script done on 2022-02-11 16:25:34 UTC
+
+END.

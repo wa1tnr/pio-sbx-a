@@ -16,4 +16,7 @@ https://docs.platformio.org/en/latest/core/userguide/project/cmd_init.html#cmd-p
 arduino libraries:
 https://community.platformio.org/t/how-to-include-arduino-library-in-platformio/15146
 
+registry:
+https://registry.platformio.org/
+
 END.

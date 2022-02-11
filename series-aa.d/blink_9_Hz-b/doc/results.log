@@ -1,5 +1,70 @@
 
 
+Fri 11 Feb 13:51:57 UTC 2022
+
+    SHOWS how additional files were deleted during a '-t clean' op.
+
+ $   cd /some/path/to/pio-sbx-a/series-aa.d/blink_9_Hz-b/
+
+ $   git status
+On branch dvlp-aa
+Your branch is up to date with 'origin/dvlp-aa'.
+
+ pio $  ls
+doc  include  lib  platformio.ini  src  test
+
+ pio $  pio run -t clean
+Processing adafruit_circuitplayground_m0 (platform: atmelsam; board: adafruit_circuitplayground_m0; framework: arduino)
+---------------------------------------------------------------------------------------------------------
+Removed .pio/build/adafruit_circuitplayground_m0/libFrameworkArduino.a
+Removed .pio/build/adafruit_circuitplayground_m0/.sconsign39.dblite
+Removed .pio/build/adafruit_circuitplayground_m0/firmware.elf
+Removed .pio/build/adafruit_circuitplayground_m0/firmware.bin
+Removed .pio/build/adafruit_circuitplayground_m0/libFrameworkArduinoVariant.a
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduinoVariant/variant.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_analog.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/main.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WMath.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WString.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Stream.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_digital.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/delay.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/new.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Reset.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_private.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/pulse.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Tone.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Uart.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/cortex_handlers.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/math_helper.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/pulse_asm.S.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/startup.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WInterrupts.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/SERCOM.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Print.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/hooks.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_shift.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/abi.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/IPAddress.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/itoa.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/USBCore.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/CDC.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/SAMD21_USBDevice.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/samd21_host.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/PluggableUSB.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/avr/dtostrf.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/src/main.cpp.o
+Done cleaning
+====================================== [SUCCESS] Took 0.34 seconds ======================================
+
+ $
+
+
+ENiD,
+
+
+
 Fri 11 Feb 13:42:33 UTC 2022
 
 

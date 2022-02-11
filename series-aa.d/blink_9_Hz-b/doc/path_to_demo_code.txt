@@ -1,0 +1,6 @@
+ $  cd ..
+
+ $  /bin/pwd
+/some/path/to/pio-sbx-a/series-aa.d/blink_9_Hz-b
+
+ $  ls ./.pio/libdeps/adafruit_circuitplayground_m0/Adafruit\ Circuit\ Playground/examples/accel_mouse/accel_mouse.ino 

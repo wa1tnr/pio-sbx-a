@@ -1,0 +1,118 @@
+Script started on 2022-02-11 16:21:11 UTC
+
+ $  pio run -t clean | cat 2>&1
+Processing adafruit_circuitplayground_m0 (platform: atmelsam; board: adafruit_circuitplayground_m0; framework: arduino)
+--------------------------------------------------------------------------------
+Removed .pio/build/adafruit_circuitplayground_m0/libFrameworkArduino.a
+Removed .pio/build/adafruit_circuitplayground_m0/.sconsign39.dblite
+Removed .pio/build/adafruit_circuitplayground_m0/firmware.elf
+Removed .pio/build/adafruit_circuitplayground_m0/firmware.bin
+Removed .pio/build/adafruit_circuitplayground_m0/libFrameworkArduinoVariant.a
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduinoVariant/variant.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/libAdafruit_TinyUSB_Arduino.a
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/tusb.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/usbtmc/usbtmc_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/net/net_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/bth/bth_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/vendor/vendor_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/audio/audio_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/msc/msc_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/dfu/dfu_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/dfu/dfu_rt_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/cdc/cdc_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/hid/hid_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/class/midi/midi_device.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/common/tusb_fifo.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_CDC.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/Adafruit_TinyUSB_API.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/Adafruit_USBD_Device.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/msc/Adafruit_USBD_MSC.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/hid/Adafruit_USBD_HID.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/midi/Adafruit_USBD_MIDI.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/webusb/Adafruit_USBD_WebUSB.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/ports/esp32/Adafruit_TinyUSB_esp32.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/ports/nrf/Adafruit_TinyUSB_nrf.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/ports/samd/Adafruit_TinyUSB_samd.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/arduino/ports/rp2040/Adafruit_TinyUSB_rp2040.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/device/usbd.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/device/usbd_control.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/espressif/esp32sx/dcd_esp32sx.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/microchip/samd/dcd_samd.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/nxp/lpc_ip3511/dcd_lpc_ip3511.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/nxp/transdimension/dcd_transdimension.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/hcd_rp2040.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/rp2040_usb.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/st/synopsys/dcd_synopsys.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/st/stm32_fsdev/dcd_stm32_fsdev.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libfb2/Adafruit_TinyUSB_Arduino/portable/nordic/nrf5x/dcd_nrf5x.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/libf61/libSPI.a
+Removed .pio/build/adafruit_circuitplayground_m0/libf61/SPI/SPI.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib7c6/libHID.a
+Removed .pio/build/adafruit_circuitplayground_m0/lib7c6/HID/HID.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/libAdafruit Circuit Playground.a
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/Adafruit_CircuitPlayground.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_ZeroPDM.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_NeoPixel.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibRecvPCI.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibProtocols.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/ffft.S.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_LIS3DH.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibRecvBase.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibSendBase.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/CP_Firmata.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_FreeTouch.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_Mic.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/CPlay_CapacitiveSensor.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibDecodeBase.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibSAMD21.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/IRLibHardware.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/Adafruit_CPlay_Speaker.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib2fb/Adafruit Circuit Playground/utility/talkie.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/lib505/libMouse.a
+Removed .pio/build/adafruit_circuitplayground_m0/lib505/Mouse/Mouse.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libd6e/libAdafruit Zero DMA Library.a
+Removed .pio/build/adafruit_circuitplayground_m0/libd6e/Adafruit Zero DMA Library/Adafruit_ZeroDMA.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_analog.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/main.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WMath.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WString.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Stream.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_digital.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/delay.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/new.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Reset.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_private.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/pulse.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Tone.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Uart.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/cortex_handlers.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/math_helper.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/pulse_asm.S.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/startup.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WInterrupts.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/SERCOM.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Print.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/hooks.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_shift.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/abi.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/IPAddress.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/itoa.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/USBCore.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/CDC.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/SAMD21_USBDevice.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/samd21_host.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/PluggableUSB.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/avr/dtostrf.c.o
+Removed .pio/build/adafruit_circuitplayground_m0/src/main.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/libded/libWire.a
+Removed .pio/build/adafruit_circuitplayground_m0/libded/Wire/Wire.cpp.o
+Done cleaning
+========================= [SUCCESS] Took 0.40 seconds =========================
+
+$ exit
+
+Script done on 2022-02-11 16:22:00 UTC
+
+END.

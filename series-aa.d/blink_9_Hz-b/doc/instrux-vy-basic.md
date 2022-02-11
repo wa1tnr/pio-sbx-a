@@ -10,4 +10,7 @@ https://docs.platformio.org/en/latest/core/userguide/cmd_boards.html#cmd-boards
 the hint to find the above link came here:
 https://docs.platformio.org/en/latest/core/quickstart.html#core-quickstart
 
+pio project init:
+https://docs.platformio.org/en/latest/core/userguide/project/cmd_init.html#cmd-project-init
+
 END.

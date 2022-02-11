@@ -1,0 +1,26 @@
+
+
+Fri 11 Feb 13:25:54 UTC 2022
+
+ $ pwd
+/some/path/to/pio-sbx-a/series-aa.d/blink_9_Hz-b
+
+ $  pio project init --board adafruit_circuitplayground_m0
+
+The current working directory /some/path/to/pio-sbx-a/series-aa.d/blink_9_Hz-b will be used for the project.
+
+The next files/directories have been created in /some/path/to/pio-sbx-a/series-aa.d/blink_9_Hz-b
+include - Put project header files here
+lib - Put here project specific (private) libraries
+src - Put project source files here
+platformio.ini - Project Configuration File
+
+Project has been successfully initialized! Useful commands:
+`pio run` - process/build project from the current directory
+`pio run --target upload` or `pio run -t upload` - upload firmware to a target
+`pio run --target clean` - clean project (remove compiled files)
+`pio run --help` - additional information
+
+ $ 
+
+END.

@@ -1,5 +1,89 @@
 
 
+Fri 11 Feb 13:42:33 UTC 2022
+
+
+ $ pio run -t clean
+Processing adafruit_circuitplayground_m0 (platform: atmelsam; board: adafruit_circuitplayground_m0; framework: arduino)
+---------------------------------------------------------------------------------------------------------
+Removed .pio/build/adafruit_circuitplayground_m0/.sconsign39.dblite
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduinoVariant/variant.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Print.cpp.o
+Removed .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/IPAddress.cpp.o
+Done cleaning
+====================================== [SUCCESS] Took 0.30 seconds ======================================
+
+
+ $  pio run
+Processing adafruit_circuitplayground_m0 (platform: atmelsam; board: adafruit_circuitplayground_m0; framework: arduino)
+---------------------------------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/atmelsam/adafruit_circuitplayground_m0.html
+PLATFORM: Atmel SAM (7.1.0) > Adafruit Circuit Playground Express
+HARDWARE: SAMD21G18A 48MHz, 32KB RAM, 256KB Flash
+DEBUG: Current (atmel-ice) External (atmel-ice, blackmagic, jlink)
+PACKAGES:
+ - framework-arduino-samd-adafruit 1.7.5
+ - framework-cmsis 2.50400.181126 (5.4.0)
+ - framework-cmsis-atmel 1.2.2
+ - toolchain-gccarmnoneeabi 1.90301.200702 (9.3.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 11 compatible libraries
+Scanning dependencies...
+No dependencies
+Building in release mode
+Compiling .pio/build/adafruit_circuitplayground_m0/src/main.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduinoVariant/variant.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/IPAddress.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Print.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Reset.cpp.o
+Archiving .pio/build/adafruit_circuitplayground_m0/libFrameworkArduinoVariant.a
+Indexing .pio/build/adafruit_circuitplayground_m0/libFrameworkArduinoVariant.a
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/SERCOM.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Stream.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Tone.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/CDC.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/PluggableUSB.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/SAMD21_USBDevice.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/USBCore.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/USB/samd21_host.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/Uart.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WInterrupts.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WMath.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/WString.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/abi.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/avr/dtostrf.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/cortex_handlers.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/delay.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/hooks.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/itoa.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/main.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/math_helper.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/new.cpp.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/pulse.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/pulse_asm.S.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/startup.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_analog.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_digital.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_private.c.o
+Compiling .pio/build/adafruit_circuitplayground_m0/FrameworkArduino/wiring_shift.c.o
+Archiving .pio/build/adafruit_circuitplayground_m0/libFrameworkArduino.a
+Indexing .pio/build/adafruit_circuitplayground_m0/libFrameworkArduino.a
+Linking .pio/build/adafruit_circuitplayground_m0/firmware.elf
+Checking size .pio/build/adafruit_circuitplayground_m0/firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]   8.0% (used 2612 bytes from 32768 bytes)
+Flash: [          ]   4.2% (used 10976 bytes from 262144 bytes)
+Building .pio/build/adafruit_circuitplayground_m0/firmware.bin
+====================================== [SUCCESS] Took 5.10 seconds ======================================
+ $
+
+
+ENiD,
+
+
 Fri 11 Feb 13:25:54 UTC 2022
 
  $ pwd
@@ -21,6 +105,6 @@ Project has been successfully initialized! Useful commands:
 `pio run --target clean` - clean project (remove compiled files)
 `pio run --help` - additional information
 
- $ 
+ $
 
 END.

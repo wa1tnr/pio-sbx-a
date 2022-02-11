@@ -1,0 +1,57 @@
+adafruit_blm_badge             SAMD21E18A   48MHz        256KB    32KB   Adafruit BLM Badge
+adafruit_circuitplayground_m0  SAMD21G18A   48MHz        256KB    32KB   Adafruit Circuit Playground Express
+adafruit_crickit_m0            SAMD21G18A   48MHz        256KB    32KB   Adafruit Crickit M0
+adafruit_feather_m0            SAMD21G18A   48MHz        256KB    32KB   Adafruit Feather M0
+adafruit_feather_m0_express    SAMD21G18A   48MHz        256KB    32KB   Adafruit Feather M0 Express
+adafruit_gemma_m0              SAMD21E18A   48MHz        256KB    32KB   Adafruit Gemma M0
+adafruit_hallowing             SAMD21G18A   48MHz        256KB    32KB   Adafruit Hallowing M0
+adafruit_itsybitsy_m0          SAMD21G18A   48MHz        256KB    32KB   Adafruit ItsyBitsy M0
+adafruit_metro_m0              SAMD21G18A   48MHz        256KB    32KB   Adafruit Metro M0 Expresss
+adafruit_neokeytrinkey_m0      SAMD21E18A   48MHz        256KB    32KB   Adafruit NeoKey Trinkey
+adafruit_neotrinkey_m0         SAMD21E18A   48MHz        256KB    32KB   Adafruit NeoPixel Trinkey
+adafruit_proxlighttrinkey_m0   SAMD21E18A   48MHz        256KB    32KB   Adafruit ProxLight Trinkey
+adafruit_qt_py_m0              SAMD21E18A   48MHz        256KB    32KB   Adafruit QT Py M0
+adafruit_rotarytrinkey_m0      SAMD21E18A   48MHz        256KB    32KB   Adafruit Rotary Trinkey
+adafruit_slidetrinkey_m0       SAMD21E18A   48MHz        256KB    32KB   Adafruit Slide Trinkey
+adafruit_trinket_m0            SAMD21E18A   48MHz        256KB    32KB   Adafruit Trinket M0
+adafruit_pirkey                SAMD21E18A   48MHz        256KB    32KB   Adafruit pIRkey
+mzeroUSB                       SAMD21G18A   48MHz        256KB    32KB   Arduino M0
+mzeroproUSB                    SAMD21G18A   48MHz        256KB    32KB   Arduino M0 Pro (Native USB Port)
+mzeropro                       SAMD21G18A   48MHz        256KB    32KB   Arduino M0 Pro (Programming/Debug Port)
+mkrfox1200                     SAMD21G18A   48MHz        256KB    32KB   Arduino MKR FOX 1200
+mkrgsm1400                     SAMD21G18A   48MHz        256KB    32KB   Arduino MKR GSM 1400
+mkrnb1500                      SAMD21G18A   48MHz        256KB    32KB   Arduino MKR NB 1500
+mkrwan1300                     SAMD21G18A   48MHz        256KB    32KB   Arduino MKR WAN 1300
+mkrwan1310                     SAMD21G18A   48MHz        256KB    32KB   Arduino MKR WAN 1310
+mkrwifi1010                    SAMD21G18A   48MHz        256KB    32KB   Arduino MKR WiFi 1010
+mkr1000USB                     SAMD21G18A   48MHz        256KB    32KB   Arduino MKR1000
+mkrzero                        SAMD21G18A   48MHz        256KB    32KB   Arduino MKRZERO
+tian                           SAMD21G18A   48MHz        256KB    32KB   Arduino Tian
+zero                           SAMD21G18A   48MHz        256KB    32KB   Arduino Zero (Programming/Debug Port)
+zeroUSB                        SAMD21G18A   48MHz        256KB    32KB   Arduino Zero (USB Native Port)
+samd21g18a                     SAMD21G18A   48MHz        256KB    32KB   Atmel ATSAMW25-XPRO
+samd21_xpro                    SAMD21J18A   48MHz        256KB    32KB   Atmel SAMD21-XPRO
+briki_abc_samd21               SAMD21G18A   48MHz        256KB    32KB   Briki ABC (MBC-WB) - Samd21
+briki_mbcwb_samd21             SAMD21G18A   48MHz        256KB    32KB   Briki MBC-WB - Samd21
+current_ranger                 SAMD21G18A   48MHz        256KB    32KB   LowPowerLab CurrentRanger
+mkrvidor4000                   SAMD21G18A   48MHz        256KB    32KB   MKR Vidor 4000
+minitronics20                  SAMD21J18A   48MHz        256KB    32KB   Minitronics v2.0
+moteino_zero                   SAMD21G18A   48MHz        256KB    32KB   Moteino M0
+nano_33_iot                    SAMD21G18A   48MHz        256KB    32KB   NANO 33 IoT
+sodaq_autonomo                 SAMD21J18A   48MHz        256KB    32KB   SODAQ Autonomo
+sodaq_explorer                 SAMD21J18A   48MHz        256KB    32KB   SODAQ ExpLoRer
+sodaq_one                      SAMD21G18A   48MHz        256KB    32KB   SODAQ ONE
+sodaq_sara                     SAMD21J18A   48MHz        256KB    32KB   SODAQ SARA
+sodaq_sff                      SAMD21G18A   48MHz        256KB    32KB   SODAQ SFF
+seeed_femto                    SAMD21G18A   48MHz        256KB    32KB   Seeeduino Femto M0
+seeeduino_lorawan              SAMD21G18A   48MHz        256KB    32KB   Seeeduino LoRaWAN
+seeed_wio_lite_mg126           SAMD21G18A   48MHz        256KB    32KB   Seeeduino Wio Lite MG126
+seeed_xiao                     SAMD21G18A   48MHz        256KB    32KB   Seeeduino XIAO
+seeed_zero                     SAMD21G18A   48MHz        256KB    32KB   Seeeduino Zero
+sparkfun_samd21_9dof           SAMD21G18A   48MHz        256KB    32KB   SparkFun 9DoF Razor IMU M0
+sparkfun_qwiic_micro_samd21e   SAMD21E18A   48MHz        256KB    32KB   SparkFun Qwiic Micro
+sparkfun_redboard_turbo        SAMD21G18A   48MHz        256KB    32KB   SparkFun RedBoard Turbo
+sparkfun_samd21_dev_usb        SAMD21G18A   48MHz        256KB    32KB   SparkFun SAMD21 Dev Breakout
+sparkfun_samd21_mini_usb       SAMD21G18A   48MHz        256KB    32KB   SparkFun SAMD21 Mini Breakout
+sparkfun_samd21_proRF          SAMD21G18A   48MHz        256KB    32KB   SparkFun SAMD21 Pro RF
+tuinozero96                    SAMD21G18A   48MHz        256KB    32KB   Tuino 096

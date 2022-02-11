@@ -1,0 +1,15 @@
+Fri 11 Feb 21:01:14 UTC 2022
+
+This particular project can tolerate removal of
+the ./.pio directory substructure, as well as
+the ./.pio/ directory, itself.
+
+This project gets all its libs from
+
+    ./some_path_to/Arduino/libraries
+
+except for the Mouse lib.
+
+The Mouse lib is specified in the platform.ini file.
+
+END

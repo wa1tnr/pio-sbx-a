@@ -1,3 +1,7 @@
+
+
+ $ pio project init --board adafruit_circuitplayground_m0
+
  $ cat boards_SAMD21.txt | egrep xpre | egrep daf > boards-samd21-express-adafruit.txt
  $ pio boards | egrep SAMD21 > boards_SAMD21.txt
 

@@ -4,6 +4,8 @@
 
 // purpose: blink LED at 9 Hertz.
 
+#include "Arduino.h" // isrt quoted here
+
 #define i9_Hz 55 // milliseconds
 
 // target: almost any board will do, including the Uno R3

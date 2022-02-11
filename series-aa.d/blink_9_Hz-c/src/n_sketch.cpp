@@ -1,5 +1,5 @@
 // old_filename: blink_9_Hz-a.ino
-#define DATE_STAMP "11 Feb 2022 Friday 20:54:06 UTC"
+#define DATE_STAMP "11 Feb 2022 Friday 23:14:42 UTC"
 
 // target: Adafruit Circuit Playground Express (CPX) ATSAMD21G18A
 
@@ -8,7 +8,8 @@
 // purpose: exercise accelerometer
 // old_purpose: blink LED at 9 Hertz.
 
-#include "Arduino.h" // isrt quoted here
+// #include "Arduino.h" // isrt quoted here
+#include <Arduino.h> // isrt quoted here
 #undef  HOLD_FOREVER
 #define HOLD_FOREVER // circumvent main loop so mouse control is regained
 #undef  HOLD_FOREVER

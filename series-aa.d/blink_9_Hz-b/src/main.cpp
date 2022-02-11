@@ -8,6 +8,9 @@
 // old_purpose: blink LED at 9 Hertz.
 
 #include "Arduino.h" // isrt quoted here
+#undef  HOLD_FOREVER
+#define HOLD_FOREVER // circumvent main loop so mouse control is regained
+#undef  HOLD_FOREVER
 
 #include <Adafruit_CircuitPlayground.h>
 #include <Mouse.h>
@@ -42,7 +45,8 @@ void pulse_at_9_Hz(void) {
 }
 
 void pulse(void) { // alias
-    pulse_at_9_Hz();
+    // pulse_at_9_Hz();
+    pulse_once(i9_Hz);
 }
 
 void setup_gpio(void) {
@@ -50,9 +54,16 @@ void setup_gpio(void) {
     digitalWrite(LED, 0); // turn it off
 }
 
+void blink_waiting(void) {
+    pulse_once(i9_Hz);
+    delay(7200); // no harm nothing happening now
+}
+
 void setup_serial(void) {
     Serial.begin(9600);
-    while(!Serial); // hold for serial connection
+    while(!Serial) { // hold for serial connection
+        blink_waiting();
+    }
     delay(100); // superstition
     Serial.println("Program is online now.");
 }
@@ -62,9 +73,36 @@ void bring_stuff_up(void) {
     setup_serial();
 }
 
+void mousing(void) {
+    Serial.println("Program may begin to move the mouse pointer (depending on how it was compiled).");
+}
+
 void blinking(void) {
-    Serial.println("Program begins to blink.");
-    pulse();
+    Serial.println("Program may begin to blink (depending on how it was compiled).");
+    // pulse();
+}
+
+void in_all_cases(void) {
+    #warning serial port connection usually required
+    Serial.println("In all cases - you are likely required to connect to the serial port.");
+    /*
+        If the program does little or nothing, try connecting to
+        the serial port (USB).
+        It ordinarily waits for this connection before continuing.
+        It will not time-out - it will instead wait forever. ;)
+
+        See, in particular:
+
+            setup_serial();
+
+        That's a good place to disable the behavior.
+    */
+}
+
+void announces(void) {
+    blinking();
+    mousing();
+    in_all_cases();
 }
 
 void setup(void) {
@@ -72,7 +110,7 @@ void setup(void) {
     // new:
     CircuitPlayground.begin(); Mouse.begin();
     bring_stuff_up();
-    blinking();
+    announces();
 }
 
 
@@ -88,8 +126,13 @@ float lerp(float x, float x0, float x1, float y0, float y1) {
 
 
 void loop(void) {
+#ifdef HOLD_FOREVER
+   while(-1); // hold forever
+#endif
+/*
     while(-1); // endless
     Serial.println("This never prints.");
+*/
 
   float x = CircuitPlayground.motionX();
   float y = CircuitPlayground.motionY();
@@ -114,6 +157,7 @@ void loop(void) {
     Mouse.move((int)y_mouse, (int)x_mouse, 0);
   }
   delay(10);
+  pulse();
 }
 
 // ENiD,

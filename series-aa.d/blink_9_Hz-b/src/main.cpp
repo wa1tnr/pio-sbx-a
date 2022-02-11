@@ -1,21 +1,32 @@
-// blink_9_Hz-a.ino
+// old_filename: blink_9_Hz-a.ino
+
+// target: Adafruit Circuit Playground Express (CPX) ATSAMD21G18A
 
 // Sun  5 Dec 11:50:37 UTC 2021
 
-// purpose: blink LED at 9 Hertz.
+// purpose: exercise accelerometer
+// old_purpose: blink LED at 9 Hertz.
 
 #include "Arduino.h" // isrt quoted here
 
 #include <Adafruit_CircuitPlayground.h>
-// #include <Mouse.h>
-// #include <Wire.h>
-// #include <SPI.h>
+#include <Mouse.h>
+#include <Wire.h>
+#include <SPI.h>
 
 #define i9_Hz 55 // milliseconds
 
-// target: almost any board will do, including the Uno R3
-
 #define LED 13 // change for your target board
+
+#define XACCEL_MIN 0.1
+#define XACCEL_MAX 8.0
+#define XMOUSE_RANGE 25.0
+#define XMOUSE_SCALE 1
+#define YACCEL_MIN XACCEL_MIN
+#define YACCEL_MAX XACCEL_MAX
+#define YMOUSE_RANGE XMOUSE_RANGE
+#define YMOUSE_SCALE 1
+#define FLIP_AXES true
 
 void pulse_once(int interval) {
     digitalWrite(LED,HIGH);
@@ -58,8 +69,24 @@ void blinking(void) {
 
 void setup(void) {
     delay(700); // recovery chance interval
+    // new:
+    CircuitPlayground.begin(); Mouse.begin();
     bring_stuff_up();
     blinking();
+}
+
+float lerp(float x, float x0, float x1, float y0, float y1) {
+  // Check if the input value (x) is outside its desired range and clamp to
+  // those min/max y values.
+  if (x <= x0) {
+    return y0;
+  }
+  else if (x >= x1) {
+    return y1;
+  }
+  // Otherwise compute the value y based on x's position within its range and
+  // the desired y min & max.
+  return y0 + (y1-y0)*((x-x0)/(x1-x0));
 }
 
 void loop(void) {
@@ -67,7 +94,7 @@ void loop(void) {
     Serial.println("This never prints.");
 }
 
-// END.
+// ENiD,
 
 #if 0
 // Circuit Playground Accelerometer Mouse Example
@@ -114,6 +141,8 @@ void loop(void) {
 // range and maps it to a new value inside another range.  This is used to transform
 // each axis of acceleration to mouse velocity/speed. See this page for details
 // on the equation: https://en.wikipedia.org/wiki/Linear_interpolation
+
+
 float lerp(float x, float x0, float x1, float y0, float y1) {
   // Check if the input value (x) is outside its desired range and clamp to
   // those min/max y values.

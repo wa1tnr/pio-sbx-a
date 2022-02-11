@@ -19,4 +19,7 @@ https://community.platformio.org/t/how-to-include-arduino-library-in-platformio/
 registry:
 https://registry.platformio.org/
 
+example, circuit playground (CPX support):
+https://registry.platformio.org/libraries/adafruit/Adafruit%20Circuit%20Playground/installation
+
 END.

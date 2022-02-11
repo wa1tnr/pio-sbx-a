@@ -13,4 +13,7 @@ https://docs.platformio.org/en/latest/core/quickstart.html#core-quickstart
 pio project init:
 https://docs.platformio.org/en/latest/core/userguide/project/cmd_init.html#cmd-project-init
 
+arduino libraries:
+https://community.platformio.org/t/how-to-include-arduino-library-in-platformio/15146
+
 END.

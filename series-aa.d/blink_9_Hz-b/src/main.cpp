@@ -21,20 +21,13 @@
 
 #define LED 13 // change for your target board
 
-// PRE_KLUDGE #define XACCEL_MIN 0.9 // 0.1 prior to 11 aug
-#define XACCEL_MIN 1.0 // 0.1 prior to 11 aug
+// NICE PATCH: XACCEL_MIN: 3.0, XACCEL_MAX: 2.0, and XMOUSE_RANGE: 2.0
+// The effect: wide dead spot at centers.  Requires considerable tilt to start in any direction.
+// That was the effect intented. ;)
 
-
-// PRE NOW TRIAL FARFAR // #define XACCEL_MAX 8.0
-#define XACCEL_MAX 1.0 // NOW TRIAL FARFAR // #define XACCEL_MAX 8.0
-
-
-
-// changed 11 aug // #define XMOUSE_RANGE 25.0
-// #define XMOUSE_RANGE 125.0 // super fast hard to control at all
-// PRE_KLUDGE #define XMOUSE_RANGE 1.1 // going for super slow 11 aug
-#define XMOUSE_RANGE 1.0 // going for super slow 11 aug
-
+#define XACCEL_MIN 3.0 // 0.1 prior to 11 aug
+#define XACCEL_MAX 2.0 // 8.0
+#define XMOUSE_RANGE 2.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
 
 /*
 

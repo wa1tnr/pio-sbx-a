@@ -26,15 +26,28 @@
 // The effect: wide dead spot at centers.  Requires considerable tilt to start in any direction.
 // That was the effect intented. ;)
 
-// BEST 22:47z #define XACCEL_THRESHOLD 3.0 // 0.1 prior to 11 aug
 #define XACCEL_THRESHOLD 0.7 // 0.1 prior to 11 aug
-#define XACCEL_MAX 2.0 // 8.0
-// BEST 22:47z #define XMOUSE_SPEED 2.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
-#define XMOUSE_SPEED 4.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
+
+
+// sensitivity to threshold where high speed kicks in: XACCEL_MAX.
+// 'does it trip too easily when not tilted a lot?'
+
+
+// trial 23:33z 11 Aug: increase _MAX from 2.0 to 4.0 .. want it to trip much further from flat.
+#define XACCEL_MAX 4.0 // 8.0 // tripwire: if larger than _MAX, then max it out (to the value of _SPEED).
+
+
+
+// trial 23:33z 11 Aug: increase _SPEED from 4.0 to 6.0 .. when it does trip, want it to go faster.
+#define XMOUSE_SPEED 6.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
 
 /*
 
     lerp returns XMOUSE_SPEED when it goes past XACCEL_MAX
+
+    if it's > MAX then just return SPEED itself
+
+    float x_mouse = lerp(x_mag, XACCEL_THRESHOLD, XACCEL_MAX, 0.0, XMOUSE_SPEED);
 
 */
 

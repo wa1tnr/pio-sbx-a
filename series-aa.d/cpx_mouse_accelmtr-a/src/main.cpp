@@ -27,7 +27,7 @@
 // That was the effect intented. ;)
 
 // BEST 22:47z #define XACCEL_THRESHOLD 3.0 // 0.1 prior to 11 aug
-#define XACCEL_THRESHOLD 1.2 // 0.1 prior to 11 aug
+#define XACCEL_THRESHOLD 1.0 // 0.1 prior to 11 aug
 #define XACCEL_MAX 2.0 // 8.0
 // BEST 22:47z #define XMOUSE_RANGE 2.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
 #define XMOUSE_RANGE 4.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
@@ -46,6 +46,7 @@
 // #define FLIP_AXES true // factory code
 #define FLIP_AXES false // local mod tnr
 #define FLIP_X_AXIS true
+#define FLIP_Y_AXIS true
 
 void pulse_once(int interval) {
     digitalWrite(LED,HIGH);
@@ -188,6 +189,11 @@ void loop(void) {
   if (x < 0) {
     x_mouse *= -1.0;
   }
+
+#ifdef FLIP_Y_AXIS
+  y_mouse *= -1.0;
+#endif
+
   if (y < 0) {
     y_mouse *= -1.0;
   }

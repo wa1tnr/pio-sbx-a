@@ -23,11 +23,25 @@
 
 // PRE_KLUDGE #define XACCEL_MIN 0.9 // 0.1 prior to 11 aug
 #define XACCEL_MIN 1.0 // 0.1 prior to 11 aug
-#define XACCEL_MAX 8.0
+
+
+// PRE NOW TRIAL FARFAR // #define XACCEL_MAX 8.0
+#define XACCEL_MAX 1.0 // NOW TRIAL FARFAR // #define XACCEL_MAX 8.0
+
+
+
 // changed 11 aug // #define XMOUSE_RANGE 25.0
 // #define XMOUSE_RANGE 125.0 // super fast hard to control at all
 // PRE_KLUDGE #define XMOUSE_RANGE 1.1 // going for super slow 11 aug
 #define XMOUSE_RANGE 1.0 // going for super slow 11 aug
+
+
+/*
+
+    lerp returns XMOUSE_RANGE when it goes past XACCEL_MAX
+
+*/
+
 #define XMOUSE_SCALE 1
 #define YACCEL_MIN XACCEL_MIN
 #define YACCEL_MAX XACCEL_MAX

@@ -8,6 +8,10 @@
 // purpose: simulate a mouse pointer no buttons - was exercise accelerometer
 
 #include "Arduino.h"
+
+#undef NO_SERIAL_USED
+#define NO_SERIAL_USED
+
 #undef  HOLD_FOREVER
 #define HOLD_FOREVER // circumvent main loop so mouse control is regained
 #undef  HOLD_FOREVER
@@ -82,23 +86,41 @@ void setup_serial(void) {
 
 void bring_stuff_up(void) {
     setup_gpio();
+#ifdef NO_SERIAL_USED
+    #warning NO_SERIAL_USED flag set
+#endif
+
+#ifndef NO_SERIAL_USED
+    #warning NO_SERIAL_USED flag unset
     setup_serial();
+#endif
 }
 
 void mousing(void) {
+#ifndef NO_SERIAL_USED
     Serial.println("Program may begin to move the mouse pointer (depending on how it was compiled).");
+#endif
 }
 
 void blinking(void) {
+#ifndef NO_SERIAL_USED
     Serial.println("Program may begin to blink (depending on how it was compiled).");
     Serial.println("git clone git@github.com:wa1tnr/pio-sbx-a.git in tinagra");
     Serial.println("");
+#endif
     // pulse();
 }
 
 void in_all_cases(void) {
+
+#ifdef NO_SERIAL_USED
+    #warning NO_SERIAL_USED flag is set
+#endif
+
+#ifndef NO_SERIAL_USED
     #warning serial port connection usually required
     Serial.println("In all cases - you are likely required to connect to the serial port.");
+#endif
     /*
         If the program does little or nothing, try connecting to
         the serial port (USB).
@@ -178,7 +200,10 @@ void loop(void) {
 
 
   if (!FLIP_AXES) {
+    // the not-FLIP state is programmed, since it's used here.
+    Mouse.move((int)x_mouse, (int)y_mouse, 0); // when not flipped
 
+#ifndef NO_SERIAL_USED
     Serial.print("  x_mouse: ");
     Serial.print(x_mouse);
 
@@ -192,6 +217,13 @@ void loop(void) {
 
     if ( y_mouse < 0.0 ) { Serial.write("ny"); }
     if ( x_mouse < 0.0 ) { Serial.write("nx"); }
+#endif
+
+
+#if 0
+
+
+
 
     if (
         ( x_mouse >  0.9 ) || // test for signed char 7 bits + sign maybe
@@ -214,13 +246,13 @@ void loop(void) {
 
 
 
-
-
-
+#endif // #if 0
 
 
   }
   else {
+
+  // the FLIP state can also be programmed; it's not used here.
 
         Mouse.move((int)y_mouse, (int)x_mouse, 0); // when flipped
 

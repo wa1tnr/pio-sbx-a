@@ -1,6 +1,6 @@
 // target: Adafruit Circuit Playground Express (CPX) ATSAMD21G18A
 
-// Thu 11 Aug 22:59:14 UTC 2022
+// Thu 11 Aug 23:14:35 UTC 2022
 
 // purpose: simulate a mouse pointer no buttons - was exercise accelerometer
 
@@ -27,7 +27,7 @@
 // That was the effect intented. ;)
 
 // BEST 22:47z #define XACCEL_THRESHOLD 3.0 // 0.1 prior to 11 aug
-#define XACCEL_THRESHOLD 1.0 // 0.1 prior to 11 aug
+#define XACCEL_THRESHOLD 0.7 // 0.1 prior to 11 aug
 #define XACCEL_MAX 2.0 // 8.0
 // BEST 22:47z #define XMOUSE_RANGE 2.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
 #define XMOUSE_RANGE 4.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.

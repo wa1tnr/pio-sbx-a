@@ -1,14 +1,13 @@
-// old_filename: blink_9_Hz-a.ino
-#define DATE_STAMP "11 Feb 2022 Friday 20:54:06 UTC"
-
 // target: Adafruit Circuit Playground Express (CPX) ATSAMD21G18A
 
+// Thu 11 Aug 14:24:53 UTC 2022
+
+// old:
 // Sun  5 Dec 11:50:37 UTC 2021
 
-// purpose: exercise accelerometer
-// old_purpose: blink LED at 9 Hertz.
+// purpose: simulate a mouse pointer no buttons - was exercise accelerometer
 
-#include "Arduino.h" // isrt quoted here
+#include "Arduino.h"
 #undef  HOLD_FOREVER
 #define HOLD_FOREVER // circumvent main loop so mouse control is regained
 #undef  HOLD_FOREVER
@@ -22,15 +21,20 @@
 
 #define LED 13 // change for your target board
 
-#define XACCEL_MIN 0.1
+// PRE_KLUDGE #define XACCEL_MIN 0.9 // 0.1 prior to 11 aug
+#define XACCEL_MIN 1.0 // 0.1 prior to 11 aug
 #define XACCEL_MAX 8.0
-#define XMOUSE_RANGE 25.0
+// changed 11 aug // #define XMOUSE_RANGE 25.0
+// #define XMOUSE_RANGE 125.0 // super fast hard to control at all
+// PRE_KLUDGE #define XMOUSE_RANGE 1.1 // going for super slow 11 aug
+#define XMOUSE_RANGE 1.0 // going for super slow 11 aug
 #define XMOUSE_SCALE 1
 #define YACCEL_MIN XACCEL_MIN
 #define YACCEL_MAX XACCEL_MAX
 #define YMOUSE_RANGE XMOUSE_RANGE
 #define YMOUSE_SCALE 1
-#define FLIP_AXES true
+// #define FLIP_AXES true // factory code
+#define FLIP_AXES false // local mod tnr
 
 void pulse_once(int interval) {
     digitalWrite(LED,HIGH);
@@ -46,7 +50,7 @@ void pulse_at_9_Hz(void) {
 }
 
 void pulse(void) { // alias
-    // pulse_at_9_Hz();
+    // OLD IGNORE 11 Aug 2022: pulse_at_9_Hz();
     pulse_once(i9_Hz);
 }
 
@@ -80,6 +84,8 @@ void mousing(void) {
 
 void blinking(void) {
     Serial.println("Program may begin to blink (depending on how it was compiled).");
+    Serial.println("git clone git@github.com:wa1tnr/pio-sbx-a.git in tinagra");
+    Serial.println("");
     // pulse();
 }
 
@@ -101,7 +107,6 @@ void in_all_cases(void) {
 }
 
 void announces(void) {
-    Serial.println(DATE_STAMP);
     blinking();
     mousing();
     in_all_cases();
@@ -136,8 +141,12 @@ void loop(void) {
     Serial.println("This never prints.");
 */
 
-  float x = CircuitPlayground.motionX();
-  float y = CircuitPlayground.motionY();
+  // float y = CircuitPlayground.motionX(); // preferred axes
+  // float x = CircuitPlayground.motionY(); // preferred axes
+
+  float x = CircuitPlayground.motionX(); // canonical axes
+  float y = CircuitPlayground.motionY(); // canonical axes
+
   float x_mag = abs(x);
   float x_mouse = lerp(x_mag, XACCEL_MIN, XACCEL_MAX, 0.0, XMOUSE_RANGE);
   float y_mag = abs(y);
@@ -152,14 +161,67 @@ void loop(void) {
   x_mouse = floor(x_mouse*XMOUSE_SCALE);
   y_mouse = floor(y_mouse*YMOUSE_SCALE);
 
+
+
+
+
+
+
+
+
+
   if (!FLIP_AXES) {
-    Mouse.move((int)x_mouse, (int)y_mouse, 0);
+
+    Serial.print("  x_mouse: ");
+    Serial.print(x_mouse);
+
+    Serial.print("  y_mouse: "); // flipped by local cruftiness so y is x and x is y. ;)
+    Serial.print(y_mouse);
+
+    Serial.println("  ");
+
+    if ( y_mouse >  0.9 ) { Serial.write("py"); }
+    if ( x_mouse >  0.9 ) { Serial.write("px"); }
+
+    if ( y_mouse < 0.0 ) { Serial.write("ny"); }
+    if ( x_mouse < 0.0 ) { Serial.write("nx"); }
+
+    if (
+        ( x_mouse >  0.9 ) || // test for signed char 7 bits + sign maybe
+        ( y_mouse >  0.9 )
+    ) {
+        Mouse.move((int)x_mouse, (int)y_mouse, 0); // when not flipped
+        Serial.write('+');
+    }
+
+
+    if (
+        ( x_mouse < 0.0 ) ||
+        ( y_mouse < 0.0 )
+    ) {
+        Mouse.move((int)x_mouse, (int)y_mouse, 0);
+        Serial.write('-');
+    }
+
+
+
+
+
+
+
+
+
+
   }
   else {
-    Mouse.move((int)y_mouse, (int)x_mouse, 0);
+
+        Mouse.move((int)y_mouse, (int)x_mouse, 0); // when flipped
+
+
+
   }
   delay(10);
-  pulse();
+  // disable 11 Aug 2022 too much blikie action: pulse();
 }
 
 // ENiD,

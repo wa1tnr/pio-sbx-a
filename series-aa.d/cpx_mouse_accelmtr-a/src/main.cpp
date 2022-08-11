@@ -46,6 +46,7 @@
 #define YMOUSE_SCALE 1
 // #define FLIP_AXES true // factory code
 #define FLIP_AXES false // local mod tnr
+#define FLIP_X_AXIS true
 
 void pulse_once(int interval) {
     digitalWrite(LED,HIGH);
@@ -180,6 +181,10 @@ void loop(void) {
   float x_mouse = lerp(x_mag, XACCEL_MIN, XACCEL_MAX, 0.0, XMOUSE_RANGE);
   float y_mag = abs(y);
   float y_mouse = lerp(y_mag, YACCEL_MIN, YACCEL_MAX, 0.0, YMOUSE_RANGE);
+
+#ifdef FLIP_X_AXIS
+  x_mouse *= -1.0; // swap left with right, only
+#endif
 
   if (x < 0) {
     x_mouse *= -1.0;

@@ -22,26 +22,26 @@
 
 #define LED 13 // change for your target board
 
-// NICE PATCH: XACCEL_THRESHOLD: 3.0, XACCEL_MAX: 2.0, and XMOUSE_RANGE: 2.0
+// NICE PATCH: XACCEL_THRESHOLD: 3.0, XACCEL_MAX: 2.0, and XMOUSE_SPEED: 2.0
 // The effect: wide dead spot at centers.  Requires considerable tilt to start in any direction.
 // That was the effect intented. ;)
 
 // BEST 22:47z #define XACCEL_THRESHOLD 3.0 // 0.1 prior to 11 aug
 #define XACCEL_THRESHOLD 0.7 // 0.1 prior to 11 aug
 #define XACCEL_MAX 2.0 // 8.0
-// BEST 22:47z #define XMOUSE_RANGE 2.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
-#define XMOUSE_RANGE 4.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
+// BEST 22:47z #define XMOUSE_SPEED 2.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
+#define XMOUSE_SPEED 4.0 // 1.5 unbalanced + or - but 1.0 is balanced.  Why.
 
 /*
 
-    lerp returns XMOUSE_RANGE when it goes past XACCEL_MAX
+    lerp returns XMOUSE_SPEED when it goes past XACCEL_MAX
 
 */
 
 #define XMOUSE_SCALE 1
 #define YACCEL_THRESHOLD XACCEL_THRESHOLD
 #define YACCEL_MAX XACCEL_MAX
-#define YMOUSE_RANGE XMOUSE_RANGE
+#define YMOUSE_SPEED XMOUSE_SPEED
 #define YMOUSE_SCALE 1
 // #define FLIP_AXES true // factory code
 #define FLIP_AXES false // local mod tnr
@@ -178,9 +178,9 @@ void loop(void) {
   float y = CircuitPlayground.motionY(); // canonical axes
 
   float x_mag = abs(x);
-  float x_mouse = lerp(x_mag, XACCEL_THRESHOLD, XACCEL_MAX, 0.0, XMOUSE_RANGE);
+  float x_mouse = lerp(x_mag, XACCEL_THRESHOLD, XACCEL_MAX, 0.0, XMOUSE_SPEED);
   float y_mag = abs(y);
-  float y_mouse = lerp(y_mag, YACCEL_THRESHOLD, YACCEL_MAX, 0.0, YMOUSE_RANGE);
+  float y_mouse = lerp(y_mag, YACCEL_THRESHOLD, YACCEL_MAX, 0.0, YMOUSE_SPEED);
 
 #ifdef FLIP_X_AXIS
   x_mouse *= -1.0; // swap left with right, only
@@ -296,7 +296,7 @@ void loop(void) {
                             // this won't move the mouse at all.
 #define XACCEL_MAX 8.0      // Maximum range of X axis acceleration, values above
                             // this will move the mouse as fast as possible.
-#define XMOUSE_RANGE 25.0   // Range of velocity for mouse movements.  The higher
+#define XMOUSE_SPEED 25.0   // Range of velocity for mouse movements.  The higher
                             // this value the faster the mouse will move.
 #define XMOUSE_SCALE 1      // Scaling value to apply to mouse movement, this is
                             // useful to set to -1 to flip the X axis movement.
@@ -308,7 +308,7 @@ void loop(void) {
 // read the X axis values but you can override with custom values).
 #define YACCEL_THRESHOLD XACCEL_THRESHOLD
 #define YACCEL_MAX XACCEL_MAX
-#define YMOUSE_RANGE XMOUSE_RANGE
+#define YMOUSE_SPEED XMOUSE_SPEED
 #define YMOUSE_SCALE 1
 
 // Set this true to flip the mouse X/Y axis with the board X/Y axis (what you want
@@ -363,9 +363,9 @@ void loop() {
   float y = CircuitPlayground.motionY();
   // Use the magnitude of acceleration to interpolate the mouse velocity.
   float x_mag = abs(x);
-  float x_mouse = lerp(x_mag, XACCEL_THRESHOLD, XACCEL_MAX, 0.0, XMOUSE_RANGE);
+  float x_mouse = lerp(x_mag, XACCEL_THRESHOLD, XACCEL_MAX, 0.0, XMOUSE_SPEED);
   float y_mag = abs(y);
-  float y_mouse = lerp(y_mag, YACCEL_THRESHOLD, YACCEL_MAX, 0.0, YMOUSE_RANGE);
+  float y_mouse = lerp(y_mag, YACCEL_THRESHOLD, YACCEL_MAX, 0.0, YMOUSE_SPEED);
   // Change the mouse direction based on the direction of the acceleration.
   if (x < 0) {
     x_mouse *= -1.0;

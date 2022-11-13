@@ -1,0 +1,126 @@
+
+ pio $  cp -p  /some/path/to/git_repos/pio-sbx-a/series-aa.d/blink_9_Hz-c-a/Makefile Makefile.xxxx
+
+ pio $  mv Makefile.xxxx Makefile
+
+ pio $  pwd
+/some/path/to/git_repos/pio-sbx-a/series-aa.d/xdely.d/esp32
+
+ pio $  rvim -n Makefile 
+
+ pio $  make clean
+pio run -t clean
+Processing esp32doit-devkit-v1 (platform: espressif32; board: esp32doit-devkit-v1; framework: arduino)
+---------------------------------------------------------------------------------------------------------
+Removing .pio/build/esp32doit-devkit-v1
+Done cleaning
+====================================== [SUCCESS] Took 0.37 seconds ======================================
+
+
+
+ pio $  cat Makefile 
+
+all:
+        pio run
+
+install:
+        pio run -t upload
+
+clean:
+        pio run -t clean
+
+distclean: clean
+        rm -rf ./.pio
+
+
+
+ pio $  make
+pio run
+Processing esp32doit-devkit-v1 (platform: espressif32; board: esp32doit-devkit-v1; framework: arduino)
+---------------------------------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32doit-devkit-v1.html
+PLATFORM: Espressif 32 (4.2.0) > DOIT ESP32 DEVKIT V1
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb -ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20002.220503 (2.0.2) 
+ - tool-esptoolpy @ 1.30300.0 (3.3.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch3
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 31 compatible libraries
+Scanning dependencies...
+No dependencies
+Building in release mode
+Compiling .pio/build/esp32doit-devkit-v1/src/main.cpp.o
+Generating partitions .pio/build/esp32doit-devkit-v1/partitions.bin
+Archiving .pio/build/esp32doit-devkit-v1/libFrameworkArduinoVariant.a
+Indexing .pio/build/esp32doit-devkit-v1/libFrameworkArduinoVariant.a
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/Esp.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/FirmwareMSC.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/FunctionalInterrupt.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/HWCDC.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/HardwareSerial.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/IPAddress.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/IPv6Address.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/MD5Builder.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/Print.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/Stream.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/StreamString.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/USB.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/USBCDC.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/USBMSC.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/WMath.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/WString.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/base64.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/cbuf.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-adc.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-bt.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-cpu.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-dac.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-gpio.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-i2c-slave.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-i2c.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-ledc.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-matrix.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-misc.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-psram.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-rmt.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-sigmadelta.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-spi.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-time.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-timer.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-tinyusb.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-touch.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/esp32-hal-uart.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/firmware_msc_fat.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/libb64/cdecode.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/libb64/cencode.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/main.cpp.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/stdlib_noniso.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/wiring_pulse.c.o
+Compiling .pio/build/esp32doit-devkit-v1/FrameworkArduino/wiring_shift.c.o
+Archiving .pio/build/esp32doit-devkit-v1/libFrameworkArduino.a
+Indexing .pio/build/esp32doit-devkit-v1/libFrameworkArduino.a
+Linking .pio/build/esp32doit-devkit-v1/firmware.elf
+Retrieving maximum program size .pio/build/esp32doit-devkit-v1/firmware.elf
+Checking size .pio/build/esp32doit-devkit-v1/firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [          ]   5.0% (used 16276 bytes from 327680 bytes)
+Flash: [==        ]  17.7% (used 232569 bytes from 1310720 bytes)
+Building .pio/build/esp32doit-devkit-v1/firmware.bin
+esptool.py v3.3
+Creating esp32 image...
+Merged 2 ELF sections
+
+Successfully created esp32 image.
+====================================== [SUCCESS] Took 7.54 seconds ======================================
+ pio $ platformio upgrade
+Please wait while upgrading PlatformIO ...
+PlatformIO has been successfully upgraded to 6.1.5
+Release notes: https://docs.platformio.org/en/latest/history.html
+
+ pio $  cat >> this.log  # and capture all the above.
+
+END.
